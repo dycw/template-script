@@ -1,18 +1,3 @@
-[build-system]
-  build-backend = "uv_build"
-  requires = ["uv_build"]
-
-[dependency-groups]
-  dev = ["dycw-utilities[test]", "pyright[nodejs]", "rich"]
-
-[project]
-  authors = [{ email = "d.wan@icloud.com", name = "Derek Wan" }]
-  dependencies = []
-  name = "dycw-template"
-  readme = "README.md"
-  requires-python = ">= 3.14"
-  version = "0.1.0"
-
 [tool]
   [tool.bumpversion]
     allow_dirty = true
