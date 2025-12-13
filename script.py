@@ -19,7 +19,7 @@ _LOGGER = getLogger(__name__)
 
 
 @command(**CONTEXT_SETTINGS_HELP_OPTION_NAMES)
-@option("--dry-run/--no-dry-run", default=False, show_default=False, help="Dry run")
+@option("--dry-run/--no-dry-run", default=False, show_default=True, help="Dry run")
 def main(*, dry_run: bool = False) -> None:
     if dry_run:
         _LOGGER.info("Dry run; exiting...")
