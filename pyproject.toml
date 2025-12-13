@@ -3,11 +3,6 @@
     allow_dirty = true
     current_version = "0.1.0"
 
-    [[tool.bumpversion.files]]
-      filename = "src/dycw_template/__init__.py"
-      replace = "__version__ = \"{new_version}\""
-      search = "__version__ = \"{current_version}\""
-
   [tool.coverage]
     [tool.coverage.html]
       directory = ".coverage/html"
