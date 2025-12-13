@@ -4,6 +4,7 @@
 # dependencies = [
 #   "click",
 #   "dycw-utilities",
+#   "pytest-xdist",
 # ]
 # ///
 from __future__ import annotations

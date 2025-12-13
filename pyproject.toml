@@ -3,21 +3,6 @@
     allow_dirty = true
     current_version = "0.1.0"
 
-  [tool.coverage]
-    [tool.coverage.html]
-      directory = ".coverage/html"
-
-    [tool.coverage.report]
-      exclude_also = ["@overload", "if TYPE_CHECKING:"]
-      fail_under = 100.0
-      skip_covered = true
-      skip_empty = true
-
-    [tool.coverage.run]
-      branch = true
-      data_file = ".coverage/data"
-      parallel = true
-
   [tool.nitpick]
     style = [
       "https://raw.githubusercontent.com/dycw/nitpick/master/styles/3.14.toml",
@@ -51,23 +36,13 @@
     typeCheckingMode = "strict"
 
   [tool.pytest]
-    addopts = [
-      "-ra",
-      "-vv",
-      "--color=auto",
-      "--cov=dycw_template",
-      "--cov-config=pyproject.toml",
-      "--cov-report=html",
-    ]
-    asyncio_default_fixture_loop_scope = "function"
-    asyncio_mode = "auto"
+    addopts = ["-ra", "-vv", "--color=auto"]
     collect_imported_tests = false
     empty_parameter_set_mark = "fail_at_collect"
     filterwarnings = ["error"]
     minversion = "9.0"
     strict = true
-    testpaths = ["src/tests"]
-    timeout = "600"
+    testpaths = ["tests"]
     xfail_strict = true
 
   [tool.ruff]
