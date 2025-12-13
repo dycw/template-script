@@ -1,3 +1,3 @@
-# `template`
+# `template-script`
 
-Template for generic repositories
+Template for Python scripts
