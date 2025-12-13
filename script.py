@@ -4,7 +4,6 @@
 # dependencies = [
 #   "click",
 #   "dycw-utilities",
-# 'polars',
 # ]
 # ///
 from __future__ import annotations

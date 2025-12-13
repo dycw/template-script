@@ -6,11 +6,6 @@ repos:
       - id: ruff-check
         args: [--fix]
       - id: ruff-format
-  - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.17
-    hooks:
-      - id: uv-lock
-        args: [--upgrade]
   - repo: https://github.com/compwa/taplo-pre-commit
     rev: v0.9.3
     hooks:
