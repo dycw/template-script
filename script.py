@@ -2,5 +2,8 @@
 
 # /// script
 # requires-python = ">=3.14"
-# dependencies = []
+# dependencies = [
+#   "click",
+#   "dycw-utilities",
+# ]
 # ///
