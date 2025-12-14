@@ -51,7 +51,11 @@ unsafe-fixes = true
 
   [lint.flake8-bugbear]
     ban-relative-imports = "all"
+    extend-immutable-calls = ["typing.cast"]
 
   [lint.isort]
     required-imports = ["from __future__ import annotations"]
     split-on-trailing-comma = false
+
+  [lint.flake8-tidy-imports]
+    ban-relative-imports = "all"

@@ -25,7 +25,7 @@ repos:
           - --ruff
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
-    rev: 0.1.12
+    rev: 0.1.13
   - hooks:
       - id: replace-sequence-str
       - id: run-bump-my-version
