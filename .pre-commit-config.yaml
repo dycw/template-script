@@ -64,4 +64,4 @@ repos:
   - hooks:
       - id: shellcheck
     repo: https://github.com/koalaman/shellcheck-precommit
-    rev: master
+    rev: v0.11.0
