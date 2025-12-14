@@ -5,6 +5,7 @@
 #   "click",
 #   "dycw-utilities",
 #   "pytest-xdist",
+#   "typed-settings[attrs, click]",
 # ]
 # ///
 from __future__ import annotations
