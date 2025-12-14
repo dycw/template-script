@@ -41,7 +41,6 @@ repos:
     rev: 0.1.23
   - hooks:
       - id: replace-sequence-str
-      - id: run-bump-my-version
     repo: https://github.com/dycw/pre-commit-hooks
     rev: 0.13.26
   - hooks:
