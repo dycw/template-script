@@ -16,18 +16,9 @@ repos:
     rev: 0.9.17
   - hooks:
       - args:
-          - --option
-          - indent_tables=true
-          - --option
-          - indent_entries=true
-          - --option
-          - reorder_keys=true
-        id: taplo-format
-    repo: https://github.com/compwa/taplo-pre-commit
-    rev: v0.9.3
-  - hooks:
-      - args:
           - --pre-commit-prettier
+          - --pre-commit-ruff
+          - --pre-commit-shell
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
     rev: 0.1.10
@@ -70,3 +61,7 @@ repos:
           - markdown
           - yaml
     repo: local
+  - hooks:
+      - id: shellcheck
+    repo: https://github.com/koalaman/shellcheck-precommit
+    rev: master
