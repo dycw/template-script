@@ -1,7 +1,9 @@
 {
   "deprecateTypingAliases": true,
   "enableReachabilityAnalysis": false,
-  "include": [],
+  "include": [
+    "/Users/derekwan/personal/template-script/script.py"
+  ],
   "pythonVersion": "3.14",
   "reportCallInDefaultInitializer": true,
   "reportImplicitOverride": true,

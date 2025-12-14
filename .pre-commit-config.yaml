@@ -19,9 +19,11 @@ repos:
           - --pre-commit-prettier
           - --pre-commit-ruff
           - --pre-commit-taplo
+          - --pyright
+          - --pyright-include=script.py
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
-    rev: 0.1.10
+    rev: 0.1.11
   - hooks:
       - id: replace-sequence-str
       - id: run-bump-my-version
@@ -65,7 +67,9 @@ repos:
       - args:
           - --option
           - indent_tables=true
+          - --option
           - indent_entries=true
+          - --option
           - reorder_keys=true
         id: taplo-format
     repo: https://github.com/compwa/taplo-pre-commit
