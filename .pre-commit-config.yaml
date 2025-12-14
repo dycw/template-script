@@ -19,13 +19,13 @@ repos:
           - --pre-commit-prettier
           - --pre-commit-ruff
           - --pre-commit-taplo
-          - --pyright
-          - --pyright-include=script.py
-          - --pytest
-          - --ruff
+          # - --pyright
+          # - --pyright-include=script.py
+          # - --pytest
+          # - --ruff
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
-    rev: 0.1.13
+    rev: 0.1.17
   - hooks:
       - id: replace-sequence-str
       - id: run-bump-my-version
