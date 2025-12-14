@@ -2,7 +2,8 @@
   "deprecateTypingAliases": true,
   "enableReachabilityAnalysis": false,
   "include": [
-    "/Users/derekwan/personal/template-script/script.py"
+    "/Users/derekwan/personal/template-script/script.py",
+    "script.py"
   ],
   "pythonVersion": "3.14",
   "reportCallInDefaultInitializer": true,
