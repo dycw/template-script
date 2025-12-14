@@ -12,17 +12,23 @@ from __future__ import annotations
 
 from logging import getLogger
 
-from click import command, option
+from click import command
+from typed_settings import click_options, option, settings
 from utilities.click import CONTEXT_SETTINGS_HELP_OPTION_NAMES
 from utilities.logging import basic_config
 
 _LOGGER = getLogger(__name__)
 
 
+@settings
+class Settings:
+    dry_run: bool = option(default=False, help="Dry run the CLI")
+
+
 @command(**CONTEXT_SETTINGS_HELP_OPTION_NAMES)
-@option("--dry-run/--no-dry-run", default=False, show_default=True, help="Dry run")
-def main(*, dry_run: bool = False) -> None:
-    if dry_run:
+@click_options(Settings, "app", show_envvars_in_help=True)
+def main(settings: Settings, /) -> None:
+    if settings.dry_run:
         _LOGGER.info("Dry run; exiting...")
         return
     _LOGGER.info("Running...")
