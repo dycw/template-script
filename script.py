@@ -13,7 +13,7 @@ from __future__ import annotations
 from logging import getLogger
 
 from click import command
-from typed_settings import click_options, option, settings
+from typed_settings import EnvLoader, click_options, option, settings
 from utilities.click import CONTEXT_SETTINGS
 from utilities.logging import basic_config
 
@@ -26,7 +26,7 @@ class Settings:
 
 
 @command(**CONTEXT_SETTINGS)
-@click_options(Settings, "app", show_envvars_in_help=True)
+@click_options(Settings, [EnvLoader("")], show_envvars_in_help=True)
 def main(settings: Settings, /) -> None:
     if settings.dry_run:
         _LOGGER.info("Dry run; exiting...")
