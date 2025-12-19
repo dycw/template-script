@@ -5,7 +5,7 @@ repos:
         id: ruff-check
       - id: ruff-format
     repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.9
+    rev: v0.14.10
   - hooks:
       - args:
           - --upgrade
@@ -13,7 +13,7 @@ repos:
         files: ^script\.py$
         id: uv-lock
     repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.17
+    rev: 0.9.18
   - hooks:
       - args:
           - --option
@@ -27,6 +27,7 @@ repos:
     rev: v0.9.3
   - hooks:
       - args:
+          - --description=Template for Python scripts
           - --github--push--tag
           - --pre-commit--prettier
           - --pre-commit--ruff
@@ -37,10 +38,12 @@ repos:
           - --pyright--include=script.py
           - --pytest
           - --pytest--test-paths=tests
+          - --readme
+          - --repo-name=template-script
           - --ruff
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
-    rev: 0.3.2
+    rev: 0.4.6
   - hooks:
       - id: replace-sequence-str
     repo: https://github.com/dycw/pre-commit-hooks
