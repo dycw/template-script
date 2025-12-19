@@ -5,6 +5,7 @@
 #   "click >= 8.3.1, < 8.4",
 #   "dycw-utilities >= 0.170.0, < 0.171",
 #   "pytest-xdist >= 3.8.0, < 3.9",
+#   "rich >= 14.2.0, < 14.3",
 #   "typed-settings[attrs, click] >= 25.3.0, < 25.4",
 # ]
 # ///
@@ -13,6 +14,7 @@ from __future__ import annotations
 from logging import getLogger
 
 from click import command
+from rich import pretty_repr
 from typed_settings import EnvLoader, click_options, option, settings
 from utilities.click import CONTEXT_SETTINGS
 from utilities.logging import basic_config
@@ -28,6 +30,7 @@ class Settings:
 @command(**CONTEXT_SETTINGS)
 @click_options(Settings, [EnvLoader("")], show_envvars_in_help=True)
 def main(settings: Settings, /) -> None:
+    _LOGGER.info("Running with settings:\n%s", pretty_repr(settings))
     if settings.dry_run:
         _LOGGER.info("Dry run; exiting...")
         return
