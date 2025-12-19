@@ -14,7 +14,7 @@ from __future__ import annotations
 from logging import getLogger
 
 from click import command
-from rich import pretty_repr
+from rich.pretty import pretty_repr
 from typed_settings import EnvLoader, click_options, option, settings
 from utilities.click import CONTEXT_SETTINGS
 from utilities.logging import basic_config
@@ -34,7 +34,6 @@ def main(settings: Settings, /) -> None:
     if settings.dry_run:
         _LOGGER.info("Dry run; exiting...")
         return
-    _LOGGER.info("Running...")
 
 
 if __name__ == "__main__":
