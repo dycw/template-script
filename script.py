@@ -2,10 +2,10 @@
 # /// script
 # requires-python = ">=3.14"
 # dependencies = [
-#   "click",
-#   "dycw-utilities",
-#   "pytest-xdist",
-#   "typed-settings[attrs, click]",
+#   "click >= 8.3.1, < 8.4",
+#   "dycw-utilities >= 0.170.0, < 0.171",
+#   "pytest-xdist >= 3.8.0, < 3.9",
+#   "typed-settings[attrs, click] >= 25.3.0, < 25.4",
 # ]
 # ///
 from __future__ import annotations
