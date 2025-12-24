@@ -18,24 +18,31 @@ from rich.pretty import pretty_repr
 from typed_settings import EnvLoader, click_options, option, settings
 from utilities.click import CONTEXT_SETTINGS
 from utilities.logging import basic_config
+from utilities.os import is_pytest
+from utilities.text import strip_and_dedent
 
 _LOGGER = getLogger(__name__)
 
 
 @settings
 class Settings:
-    dry_run: bool = option(default=False, help="Dry run the CLI")
+    dummy: bool = option(default=False, help="Dummy flag")
 
 
 @command(**CONTEXT_SETTINGS)
 @click_options(Settings, [EnvLoader("")], show_envvars_in_help=True)
 def main(settings: Settings, /) -> None:
-    _LOGGER.info("Running with settings:\n%s", pretty_repr(settings))
-    if settings.dry_run:
-        _LOGGER.info("Dry run; exiting...")
+    if is_pytest():
         return
+    basic_config(obj=_LOGGER)
+    _LOGGER.info(
+        strip_and_dedent("""
+            Running with settings:
+            %s
+        """),
+        pretty_repr(settings),
+    )
 
 
 if __name__ == "__main__":
-    basic_config(obj=__name__)
     main()
