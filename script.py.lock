@@ -6,7 +6,8 @@ requires-python = ">=3.14"
 requirements = [
     { name = "click", specifier = ">=8.3.1,<8.4" },
     { name = "dycw-utilities", specifier = ">=0.172.3,<0.173" },
-    { name = "pytest-xdist", specifier = ">=3.8.0,<3.9" },
+    { name = "pyright" },
+    { name = "pytest-xdist" },
     { name = "rich", specifier = ">=14.2.0,<14.3" },
     { name = "typed-settings", extras = ["attrs", "click"], specifier = ">=25.3.0,<25.4" },
 ]
@@ -49,7 +50,7 @@ wheels = [
 
 [[package]]
 name = "dycw-utilities"
-version = "0.172.3"
+version = "0.172.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atomicwrites" },
@@ -57,9 +58,9 @@ dependencies = [
     { name = "tzlocal" },
     { name = "whenever" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b2/6c/2031aa978cc38f8ee0737b43c5749ea12d4c6614a0ccb08f50b28ba899f4/dycw_utilities-0.172.3.tar.gz", hash = "sha256:2445a8b1ab0b2b4559b495d36b8fb2d5d6c19fd44f025295f6474d2db4caa2b1", size = 162818, upload-time = "2025-12-21T23:49:43.527Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/48/c424a073fa819d339be60079106595be154faf82efed573ce2e9f58b24ab/dycw_utilities-0.172.7.tar.gz", hash = "sha256:4897e15357372701af215b99e79c081909ec1bae3cf788d4ffd60e2a8e581f6e", size = 163169, upload-time = "2025-12-24T01:03:16.861Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/45/76/add7beb7e1ac34b4fcb668f8e6463d735df036309fe68485c2967ecc25f0/dycw_utilities-0.172.3-py3-none-any.whl", hash = "sha256:076a86896d1898f3659c711e9cf23d5fa3a11be1ca9b25246419cd4119f84f6b", size = 196909, upload-time = "2025-12-21T23:49:45.364Z" },
+    { url = "https://files.pythonhosted.org/packages/af/85/fcbfdc9faff63b1752bb1997ec0ce8d3dd63994e82595c48ebb68dc93f0b/dycw_utilities-0.172.7-py3-none-any.whl", hash = "sha256:f61c661bf291563c9f28a924ceac72fdefb06417931e928c1b445dbe47504f5b", size = 197273, upload-time = "2025-12-24T01:03:15.256Z" },
 ]
 
 [[package]]
@@ -102,6 +103,15 @@ wheels = [
 ]
 
 [[package]]
+name = "nodeenv"
+version = "1.10.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/24/bf/d1bda4f6168e0b2e9e5958945e01910052158313224ada5ce1fb2e1113b8/nodeenv-1.10.0.tar.gz", hash = "sha256:996c191ad80897d076bdfba80a41994c2b47c68e224c542b48feba42ba00f8bb", size = 55611, upload-time = "2025-12-20T14:08:54.006Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/b2/d0896bdcdc8d28a7fc5717c305f1a861c26e18c05047949fb371034d98bd/nodeenv-1.10.0-py2.py3-none-any.whl", hash = "sha256:5bb13e3eed2923615535339b3c620e76779af4cb4c6a90deccc9e36b274d3827", size = 23438, upload-time = "2025-12-20T14:08:52.782Z" },
+]
+
+[[package]]
 name = "packaging"
 version = "25.0"
 source = { registry = "https://pypi.org/simple" }
@@ -126,6 +136,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887", size = 4968631, upload-time = "2025-06-21T13:39:12.283Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b", size = 1225217, upload-time = "2025-06-21T13:39:07.939Z" },
+]
+
+[[package]]
+name = "pyright"
+version = "1.1.407"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "nodeenv" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a6/1b/0aa08ee42948b61745ac5b5b5ccaec4669e8884b53d31c8ec20b2fcd6b6f/pyright-1.1.407.tar.gz", hash = "sha256:099674dba5c10489832d4a4b2d302636152a9a42d317986c38474c76fe562262", size = 4122872, upload-time = "2025-10-24T23:17:15.145Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/93/b69052907d032b00c40cb656d21438ec00b3a471733de137a3f65a49a0a0/pyright-1.1.407-py3-none-any.whl", hash = "sha256:6dd419f54fcc13f03b52285796d65e639786373f433e243f8b94cf93a7444d21", size = 5997008, upload-time = "2025-10-24T23:17:13.159Z" },
 ]
 
 [[package]]
