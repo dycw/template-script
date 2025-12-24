@@ -1,3 +1,3 @@
 # `template-script`
 
-Template for Python scripts
+Pre-commit hook to nitpick your project
