@@ -28,22 +28,26 @@ repos:
   - hooks:
       - args:
           - --description=Template for Python scripts
+          - --github--pull-request--pyright
+          - --github--pull-request--pytest--os--macos
+          - --github--pull-request--pytest--os--ubuntu
+          - --github--pull-request--pytest--python-version--default
+          - --github--pull-request--pytest--resolution--highest
+          - --github--pull-request--ruff
           - --github--push--tag
           - --pre-commit--prettier
           - --pre-commit--ruff
           - --pre-commit--taplo
           - --pre-commit--uv
-          - --pre-commit--uv--script=script.py
           - --pyright
-          - --pyright--include=script.py
           - --pytest
-          - --pytest--test-paths=tests
           - --readme
           - --repo-name=template-script
           - --ruff
+          - --script=script.py
         id: nitpick
     repo: https://github.com/dycw/pre-commit-hook-nitpick
-    rev: 0.4.11
+    rev: 0.6.17
   - hooks:
       - id: replace-sequence-str
     repo: https://github.com/dycw/pre-commit-hooks
