@@ -3,7 +3,7 @@
 # requires-python = ">=3.14"
 # dependencies = [
 #   "click >=8.3.1, <8.4",
-#   "dycw-utilities >=0.172.3, <0.173",
+#   "dycw-utilities >=0.175.38, <0.176",
 #   "rich >=14.2.0, <14.3",
 #   "typed-settings[attrs, click] >=25.3.0, <25.4",
 #   "pyright",
