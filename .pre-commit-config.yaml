@@ -3,7 +3,7 @@ repos:
     rev: 0.10.10
     hooks:
       - args:
-          - --description=Pre-commit hook to conformalize your project
+          - --description=Template for Python scripts
           - --envrc
           - --envrc--uv
           - --github--pull-request--pre-commit
