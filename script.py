@@ -6,8 +6,8 @@
 #   "dycw-utilities >=0.175.38, <0.176",
 #   "rich >=14.2.0, <14.3",
 #   "typed-settings[attrs, click] >=25.3.0, <25.4",
-#   "pyright",
-#   "pytest-xdist",
+#   "pyright >=1.1.407",
+#   "pytest-xdist >=3.8.0",
 # ]
 # ///
 from __future__ import annotations
