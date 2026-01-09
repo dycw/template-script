@@ -1,18 +1,19 @@
 repos:
   - repo: https://github.com/dycw/actions
-    rev: 0.6.3
+    rev: 0.10.3
     hooks:
       - id: conformalize-repo
         args:
           - --description=Template for Python scripts
           - --envrc
           - --envrc--uv
-          - --github--pull-request--pre-commit
-          - --github--pull-request--pyright
-          - --github--pull-request--pytest--macos
-          - --github--pull-request--pytest--ubuntu
-          - --github--pull-request--ruff
-          - --github--push--tag
+          - --ci--pull-request--pre-commit
+          - --ci--pull-request--pyright
+          - --ci--pull-request--pytest--all-versions
+          - --ci--pull-request--pytest--macos
+          - --ci--pull-request--pytest--ubuntu
+          - --ci--pull-request--ruff
+          - --ci--push--tag
           - --pre-commit--prettier
           - --pre-commit--python
           - --pre-commit--ruff
@@ -26,6 +27,9 @@ repos:
           - --script=script.py
       - id: format-requirements
       - id: replace-sequence-strs
+      - id: touch-empty-py
+      - id: touch-py-typed
+      - id: update-requirements
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -53,7 +57,7 @@ repos:
           - markdown
           - yaml
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.10
+    rev: v0.14.11
     hooks:
       - id: ruff-check
         args:
