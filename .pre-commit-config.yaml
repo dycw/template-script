@@ -4,9 +4,6 @@ repos:
     hooks:
       - id: conformalize-repo
         args:
-          - --description=Template for Python scripts
-          - --envrc
-          - --envrc--uv
           - --ci--pull-request--pre-commit
           - --ci--pull-request--pyright
           - --ci--pull-request--pytest--all-versions
@@ -14,6 +11,9 @@ repos:
           - --ci--pull-request--pytest--ubuntu
           - --ci--pull-request--ruff
           - --ci--push--tag
+          - --description=Template for Python scripts
+          - --envrc
+          - --envrc--uv
           - --pre-commit--prettier
           - --pre-commit--python
           - --pre-commit--ruff
